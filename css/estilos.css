@@ -105,7 +105,8 @@ img {
     transform-origin: right;
 }
 
-.nav-principal a:hover{
+.nav-principal a:hover,
+.footer-menu a:hover {
     color: var(--primary-blue);
     text-decoration: underline 1px solid;
     text-underline-offset: 0.4em;
@@ -244,4 +245,30 @@ img {
 .product-info .price {
     font-size: 2.8rem;
     font-weight: 900;
+}
+
+/*  footer */
+
+.site-footer {
+    border-top: 1px solid var(--black);
+    margin-top: 5rem;
+}
+
+.site-footer h3 {
+    margin-bottom: .5rem;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-menu a {
+    display: block;
+}
+
+.copyright {
+    margin-top: 5rem;
+    text-align: center;
 }
