@@ -8,14 +8,15 @@
 
 /* Globales */
 
-* {
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
-}
-
-html {
-    font-size: 62.5%;
 }
 
 body {
@@ -26,6 +27,19 @@ body {
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
+    margin: 0 0 5rem 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3{ 
+    font-size: 3rem;
 }
 
 a {
@@ -34,7 +48,7 @@ a {
 }
 
 .contenedor {
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
 }
 
@@ -46,10 +60,8 @@ img {
 /* Header y navegacion */
 
 .site-name {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 5rem;
     text-align: center;
-    font-size: 3.8rem;
 }
 
 .site-name span {
@@ -61,7 +73,7 @@ img {
 }
 
 .nav-principal {
-    padding: 20px 0;
+    padding: 2rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,8 +100,11 @@ img {
 
 /* CATEGORIAS */
 
+.categories-container {
+    padding: 5rem 0;
+}
+
 .categories-container h2 {
-    font-size: 3.2rem;
     text-align: center;
 }
 
@@ -109,5 +124,28 @@ img {
 .category a:hover {
     background-color: var(--primary-blue);
     color: var(--just-white);
-    border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 1rem;
 }
+
+/* Seccion sobrenosotros */
+
+.about-container {
+    background-image: linear-gradient(to right, transparent 50%, var(--primary-blue) 50%, var(--primary-blue) 100%), url(../img/nosotros.jpg);
+    padding: 10rem 0;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 100%, 120rem;
+}
+
+.about-us-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 8rem;
+}
+
+.about-us-text {
+    grid-column: 2 / 3;
+    color: var(--just-white);
+}
+
+/* Main container */
