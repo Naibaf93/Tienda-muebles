@@ -2,6 +2,7 @@
 
 :root {
     --primary-blue: #037bc0;
+    --secondary-blue: #005485;
     --black: #201e1c;
     --just-white: #fff;
     --just-green: #8cbc00;
@@ -68,10 +69,12 @@ img {
     padding: 1rem;
     transition: background-color .3s ease-out;
     text-align: center;
+    border: none;
 }
 
 .btn:hover {
     background-color: var(--hover-green);
+    cursor: pointer;
 }
 
 /* Utilidades */
@@ -344,4 +347,45 @@ img {
     height: 40rem;
     width: 40rem;
     object-fit: cover;
+}
+
+/* formulario */
+
+.form-container {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.form-container fieldset {
+    border: 1px solid var(--black);
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.form-container legend {
+    background-color: var(--secondary-blue);
+    color: var(--just-white);
+    text-transform: uppercase;
+    font-weight: 900;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo label {
+    flex-basis: 10rem;
+}
+
+.campo input:not([type="radio"]),
+ textarea,
+ select {
+    flex: 1;
+    border: 1px solid var(--black);
+    padding: 1rem;
 }
