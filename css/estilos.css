@@ -204,22 +204,44 @@ img {
 /* Seccion sobrenosotros */
 
 .about-container {
-    background-image: linear-gradient(to right, transparent 50%, var(--primary-blue) 50%, var(--primary-blue) 100%), url(../img/nosotros.jpg);
-    padding: 10rem 0;
-    background-position: left center;
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primary-blue) 50%, var(--primary-blue) 100%), url(../img/nosotros.jpg);
+    background-position: center, top left;
     background-repeat: no-repeat;
-    background-size: 100%, 120rem;
+    background-size: 100%, 70rem;
 }
 
+@media (min-width: 768px) {
+    
+    .about-container {
+        background-image: linear-gradient(to right, transparent 50%, var(--primary-blue) 50%, var(--primary-blue) 100%), url(../img/nosotros.jpg);
+        padding: 10rem 0;
+        background-position: left center;
+        background-size: 100%, 120rem;
+    }
+}
 .about-us-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 8rem;
+    grid-template-rows: repeat(2, 1fr);   
+}
+
+@media (min-width: 768px) {
+    .about-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: unset;
+        column-gap: 8rem;
+    }
 }
 
 .about-us-text {
-    grid-column: 2 / 3;
-    color: var(--just-white);
+    grid-row: 2 / 3;
+    color: var(--just-white);   
+    padding: 5rem;
+}
+
+@media (min-width: 768px) {
+    .about-us-text {
+        grid-column: 2 / 3;
+    }
 }
 
 /* Listado de productos */
