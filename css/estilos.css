@@ -166,10 +166,26 @@ img {
     padding: 5rem 0;
 }
 
-.categories-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+.category {
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .category {
+        margin-bottom: 0;
+    }
+}
+
+.category img {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .categories-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
 }
 
 .category a {
