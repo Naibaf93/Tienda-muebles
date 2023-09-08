@@ -249,61 +249,73 @@ img {
 .main-container {
     padding-top: 5rem;
 }
-
-.product-list {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 2rem;
-}
-
 .product-card {
     background-color: var(--primary-blue);
+    margin-bottom: 2rem;
 }
 
-.product-card:nth-child(1) {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+.product-card:last-of-type {
+    margin-bottom: 0;
 }
 
-.product-card:nth-child(1) img {
-    height: 43rem;
-    width: 100%;
-    object-fit: cover;
+@media (min-width: 768px) {
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2rem;
+    }
+
+    .product-card {
+        margin-bottom: 0;
+    }
+    
+    .product-card:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+    
+    .product-card:nth-child(1) img {
+        height: 43rem;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .product-card:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    
+    .product-card:nth-child(2) img,
+    .product-card:nth-child(3) img {
+        height: 30rem;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .product-card:nth-child(3) {
+        grid-column-start: 4;
+        grid-column-end: 7;
+    }
+    
+    .product-card:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .product-card:nth-child(5) {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+    
+    .product-card:nth-child(6) {
+        grid-column-start: 5;
+        grid-column-end: 7;
+    }
 }
 
-.product-card:nth-child(2) {
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
 
-.product-card:nth-child(2) img,
-.product-card:nth-child(3) img {
-    height: 30rem;
-    width: 100%;
-    object-fit: cover;
-}
-
-.product-card:nth-child(3) {
-    grid-column-start: 4;
-    grid-column-end: 7;
-}
-
-.product-card:nth-child(4) {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.product-card:nth-child(5) {
-    grid-column-start: 3;
-    grid-column-end: 5;
-}
-
-.product-card:nth-child(6) {
-    grid-column-start: 5;
-    grid-column-end: 7;
-}
 
 .product-info {
     text-align: center;
