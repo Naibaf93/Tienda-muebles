@@ -399,6 +399,13 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 5rem;
+}
+
+@media (min-width: 768px) {
+    .info-about-us {
+        padding: 0;
+    }
 }
 
 /* Blog */
