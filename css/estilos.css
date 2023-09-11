@@ -88,11 +88,18 @@ img {
     transition: background-color .3s ease-out;
     text-align: center;
     border: none;
+    width: 100%;
 }
 
 .btn:hover {
     background-color: var(--hover-green);
     cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .btn {
+        width: auto;
+    }
 }
 
 /* Utilidades */
@@ -471,8 +478,14 @@ img {
 .gallery {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .gallery img {
